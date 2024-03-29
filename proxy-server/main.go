@@ -10,8 +10,8 @@ import (
 
 func main() {
 	targets := map[string]*url.URL{
-		"origin1": parseURL("http://localhost:8081"),
-		"origin2": parseURL("http://localhost:8082"),
+		"origin1": parseURL("http://host.docker.internal:8081"),
+		"origin2": parseURL("http://host.docker.internal:8082"),
 	}
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
